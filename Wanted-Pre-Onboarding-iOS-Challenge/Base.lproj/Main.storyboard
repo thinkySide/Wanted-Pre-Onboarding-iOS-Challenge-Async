@@ -23,6 +23,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Load All Images"/>
+                                <connections>
+                                    <action selector="loadAllImageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lUe-EN-d3M"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="T9U-YT-wra">
                                 <rect key="frame" x="32" y="63" width="364" height="621"/>
@@ -44,6 +47,9 @@
                                                 <rect key="frame" x="257" y="35.333333333333329" width="107" height="34.333333333333329"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                                <connections>
+                                                    <action selector="loadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gw7-t9-wcO"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -64,6 +70,9 @@
                                                 <rect key="frame" x="257" y="35.333333333333343" width="107" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                                <connections>
+                                                    <action selector="loadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GSN-dO-T8V"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -84,6 +93,9 @@
                                                 <rect key="frame" x="257" y="35.333333333333314" width="107" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                                <connections>
+                                                    <action selector="loadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32D-lz-XF8"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -104,6 +116,9 @@
                                                 <rect key="frame" x="257" y="35.333333333333314" width="107" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                                <connections>
+                                                    <action selector="loadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yaN-YI-lcS"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -124,6 +139,9 @@
                                                 <rect key="frame" x="257" y="35.333333333333371" width="107" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                                <connections>
+                                                    <action selector="loadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bV7-8D-j5T"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
