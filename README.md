@@ -9,9 +9,9 @@
 
 ## II. 기능 정의
 - ✅ UI 디자인 (Storyboard 기반 Autolayout) 
-- 서버 통신 (이미지 다운로드 및 표시)
+- ✅ 서버 통신 (이미지 다운로드 및 표시)
 - 동시큐 사용, 모든 이미지 표시
-- progress bar 다운로드 전 0, 다운르도 후 100 (애니메이션도 줘보기)
+- [나만의 추가 챌린지] progress bar 다운로드 전 0, 다운르도 후 100 (애니메이션도 줘보기)
 
 ## III. Trouble Shooting
 ### 1. 클릭한 StackView의 Index 구하기
@@ -92,3 +92,9 @@
         }.resume()  
     }
 ~~~
+
+### 3. GCD 사용하기
+순서가 보장되지 않고 뒤죽박죽 나오고 있습니다.   
+GCD를 사용하면서 우선순위를 정해주고, 큐의 특성을 다시 한번 되새겨 봐야 합니다.
+
+<img width="600" src="https://user-images.githubusercontent.com/113565086/221193455-374dee99-de20-4d98-a3f0-a40ee937e742.jpeg">
