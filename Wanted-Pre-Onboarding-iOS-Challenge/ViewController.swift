@@ -9,6 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - Variable
+    var currentIndex = 0
+    let imageURL = [
+        "https://user-images.githubusercontent.com/113565086/221117769-7bd8f46a-965f-4674-b430-f4e5ef6c6105.png",
+        "https://user-images.githubusercontent.com/113565086/221118961-5004600b-b0ea-4783-86fd-be3d9fd18502.png",
+        "https://user-images.githubusercontent.com/113565086/221119071-11e8886c-fe8e-49cb-b88d-1be8be81fe77.png",
+        "https://user-images.githubusercontent.com/113565086/221119002-33eab713-c594-4840-a774-f2d87e8b20cb.png",
+        "https://user-images.githubusercontent.com/113565086/221119144-f2a4e119-921e-45ae-b938-c0a36ae30e44.png"
+    ]
+    
+    
     // MARK: - IBOutlet
     
     
@@ -38,17 +49,31 @@ class ViewController: UIViewController {
         let stackViewList = superStackView.arrangedSubviews
         for (index, stackView) in stackViewList.enumerated() {
             if let clickedStackView = stackView as? UIStackView, clickedStackView.arrangedSubviews[2] == sender {
-                print("Clicked index: \(index)")
+                currentIndex = index
                 break
             }
         }
         
-        imageView.backgroundColor = .systemRed
+        imageUpdate(imageView: imageView)
+
+    }
+    
+    func imageUpdate(imageView: UIImageView) {
         
+        // 현재 선택된 index의 이미지 URL
+        guard let url = URL(string: imageURL[currentIndex]) else { return }
         
-        
-        // 1. 서버 통신 (비동기)
-        // 2. 이미지 표시
+        // 글로벌 큐에서 이미지 불러오기
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: url)
+            let image = UIImage(data: data!)
+            
+            // 화면 업데이트는 메인큐에서 진행
+            DispatchQueue.main.async {
+                imageView.image = image
+            }
+            
+        }
     }
     
     

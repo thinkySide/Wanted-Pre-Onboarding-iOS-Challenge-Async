@@ -22,7 +22,10 @@
                                     <constraint firstAttribute="height" constant="48" id="Hbs-D5-Peu"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Load All Images"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Load All Images">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                    <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="loadAllImageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lUe-EN-d3M"/>
                                 </connections>
@@ -33,7 +36,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FNJ-56-5dl">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="105"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mla-Pi-Mh0">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mla-Pi-Mh0">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="105"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="6pR-AM-CFF"/>
@@ -42,11 +45,14 @@
                                             </imageView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eOC-cs-VdT">
                                                 <rect key="frame" x="148" y="50.666666666666671" width="101" height="4"/>
+                                                <color key="progressTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </progressView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FED-Yh-MIV">
                                                 <rect key="frame" x="257" y="35.333333333333329" width="107" height="34.333333333333329"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Load">
+                                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="loadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gw7-t9-wcO"/>
                                                 </connections>
@@ -56,7 +62,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kxQ-O5-9Lo">
                                         <rect key="frame" x="0.0" y="129" width="364" height="105"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MVE-hA-noa">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MVE-hA-noa">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="105"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="953-Wg-M8O"/>
@@ -65,11 +71,14 @@
                                             </imageView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="O11-lv-S4b">
                                                 <rect key="frame" x="148" y="50.666666666666657" width="101" height="4"/>
+                                                <color key="progressTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </progressView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMo-pK-l4F">
                                                 <rect key="frame" x="257" y="35.333333333333343" width="107" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Load">
+                                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="loadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GSN-dO-T8V"/>
                                                 </connections>
@@ -79,7 +88,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VFt-29-Nfc">
                                         <rect key="frame" x="0.0" y="258" width="364" height="105"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TlF-NS-LF2">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TlF-NS-LF2">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="105"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="lsD-k2-PbA"/>
@@ -88,11 +97,14 @@
                                             </imageView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vOB-FP-7gx">
                                                 <rect key="frame" x="148" y="50.666666666666686" width="101" height="4"/>
+                                                <color key="progressTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </progressView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9a-h8-2ma">
                                                 <rect key="frame" x="257" y="35.333333333333314" width="107" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Load">
+                                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="loadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32D-lz-XF8"/>
                                                 </connections>
@@ -102,7 +114,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WBX-80-a1m">
                                         <rect key="frame" x="0.0" y="387" width="364" height="105"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-4c-h6u">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-4c-h6u">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="105"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="dgk-Jf-OMz"/>
@@ -111,11 +123,14 @@
                                             </imageView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="quh-vl-EuZ">
                                                 <rect key="frame" x="148" y="50.666666666666686" width="101" height="4"/>
+                                                <color key="progressTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </progressView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIr-LY-rqm">
                                                 <rect key="frame" x="257" y="35.333333333333314" width="107" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Load">
+                                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="loadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yaN-YI-lcS"/>
                                                 </connections>
@@ -125,7 +140,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kAi-gE-7kL">
                                         <rect key="frame" x="0.0" y="516" width="364" height="105"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lEi-0M-q3M">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lEi-0M-q3M">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="105"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="EDa-lc-1tL"/>
@@ -134,11 +149,14 @@
                                             </imageView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p8Q-K7-TuW">
                                                 <rect key="frame" x="148" y="50.666666666666629" width="101" height="4"/>
+                                                <color key="progressTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </progressView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqz-ez-Dcd">
                                                 <rect key="frame" x="257" y="35.333333333333371" width="107" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Load"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Load">
+                                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="loadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bV7-8D-j5T"/>
                                                 </connections>
