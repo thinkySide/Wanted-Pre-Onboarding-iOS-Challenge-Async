@@ -10,7 +10,8 @@
 ## II. 기능 정의
 - ✅ UI 디자인 (Storyboard 기반 Autolayout) 
 - ✅ 서버 통신 (이미지 다운로드 및 표시)
-- 동시큐 사용, 모든 이미지 표시
+- ✅ 동시큐 사용, 모든 이미지 표시
+- 리팩토링
 - [나만의 추가 챌린지] progress bar 다운로드 전 0, 다운르도 후 100 (애니메이션도 줘보기)
 
 ## III. Trouble Shooting
@@ -98,3 +99,24 @@
 GCD를 사용하면서 우선순위를 정해주고, 큐의 특성을 다시 한번 되새겨 봐야 합니다.
 
 <img width="600" src="https://user-images.githubusercontent.com/113565086/221193455-374dee99-de20-4d98-a3f0-a40ee937e742.jpeg">
+
+global().async -> global().sync로 변경 후 순서를 보장했습니다.
+~~~swift
+@IBAction func loadAllImageButtonTapped(_ sender: UIButton) {
+
+        for (index, stackView) in superStackView.arrangedSubviews.enumerated() {
+            if let subStackView = stackView as? UIStackView, let imageView = subStackView.arrangedSubviews[0] as? UIImageView {
+                
+                // 이미지 초기화
+                imageView.image = UIImage(systemName: "photo.fill")
+                currentIndex = index
+                
+                // 모든 이미지 다운로드 대기열에 올리기
+                DispatchQueue.global().sync { [weak self] in // 작업을 sync(동기)로 등록했기 때문에, 작업 등록 순서와 실행 순서 일치하게 됨.
+                    guard let self = self else { return }
+                    self.imageUpdate(imageView: imageView)
+                }
+            }
+        }
+    }
+~~~
