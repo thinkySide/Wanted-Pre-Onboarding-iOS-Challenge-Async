@@ -184,6 +184,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1dK-eA-uuQ" secondAttribute="bottom" constant="12" id="qM1-G9-cx0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="superStackView" destination="T9U-YT-wra" id="N3I-1g-SLW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

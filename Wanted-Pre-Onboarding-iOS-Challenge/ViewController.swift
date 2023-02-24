@@ -19,6 +19,9 @@ class ViewController: UIViewController {
         "https://drive.google.com/uc?export=download&id=1YCxh8tYfYAwrRJbILzTotxHotEOO3pHh"
     ]
     
+    // MARK: - IBOutlet
+    @IBOutlet weak var superStackView: UIStackView!
+    
     
     // MARK: - ViewController LifeCycle
     override func viewDidLoad() {
@@ -33,7 +36,6 @@ class ViewController: UIViewController {
         // 컴포넌트 잡기
         guard
             let stackView = sender.superview as? UIStackView,
-            let superStackView = stackView.superview as? UIStackView,
             let imageView = stackView.arrangedSubviews[0] as? UIImageView
         else { return }
         
@@ -41,8 +43,7 @@ class ViewController: UIViewController {
         imageView.image = UIImage(systemName: "photo.fill")
         
         // 내가 클릭한 StackView의 Index 구하기
-        let stackViewList = superStackView.arrangedSubviews
-        for (index, stackView) in stackViewList.enumerated() {
+        for (index, stackView) in superStackView.arrangedSubviews.enumerated() {
             if let clickedStackView = stackView as? UIStackView, clickedStackView.arrangedSubviews[2] == sender {
                 currentIndex = index
                 break
@@ -50,11 +51,31 @@ class ViewController: UIViewController {
         }
         imageUpdate(imageView: imageView)
     }
-
+    
     @IBAction func loadAllImageButtonTapped(_ sender: UIButton) {
-        // 1. 서버 통신
-        // 2. 모든 UIImage 다운로드 (동시큐에 올리기)
-        // 3. 이미지 표시
+        
+        for (_, stackView) in superStackView.arrangedSubviews.enumerated() {
+            
+            // 이미지 초기화
+            if let subStackView = stackView as? UIStackView, let imageView = subStackView.arrangedSubviews[0] as? UIImageView {
+                imageView.image = UIImage(systemName: "photo.fill")
+            }
+            
+        }
+
+        
+        
+//        imageView.image = UIImage(systemName: "photo.fill")
+        
+        //        // 모든 이미지 다운로드 대기열에 올리기
+        //        DispatchQueue.global().async { [weak self] in
+        //
+        //            guard let self = self else { return }
+        //
+        //            for _ in 1...self.imageURL.count {
+        //                self.imageUpdate(imageView: imageView)
+        //            }
+        //        }
     }
     
     
