@@ -11,12 +11,21 @@ class ViewController: UIViewController {
     
     // MARK: - Variable
     var currentIndex = 0
-    let imageURL = [
-        "https://drive.google.com/uc?export=download&id=1F8orTckEM8vRhrqDQZu3Ycsde9H5BA7A",
-        "https://drive.google.com/uc?export=download&id=15GktXfKtJuJl-nJeKPExcf11QlIlHCXA",
-        "https://drive.google.com/uc?export=download&id=1FstKka8HKQQuM_YgOv5LCVVWMANCVsTm",
-        "https://drive.google.com/uc?export=download&id=10DaqhTjlC9bW7VMgQQXBDGRJ-giGsvPf",
-        "https://drive.google.com/uc?export=download&id=1YCxh8tYfYAwrRJbILzTotxHotEOO3pHh"
+    
+    //    let imageURL = [ // 구글드라이브 (중간중간 이미지 제대로 못불러오는 현상)
+    //        "https://drive.google.com/uc?export=download&id=1F8orTckEM8vRhrqDQZu3Ycsde9H5BA7A",
+    //        "https://drive.google.com/uc?export=download&id=15GktXfKtJuJl-nJeKPExcf11QlIlHCXA",
+    //        "https://drive.google.com/uc?export=download&id=1FstKka8HKQQuM_YgOv5LCVVWMANCVsTm",
+    //        "https://drive.google.com/uc?export=download&id=10DaqhTjlC9bW7VMgQQXBDGRJ-giGsvPf",
+    //        "https://drive.google.com/uc?export=download&id=1YCxh8tYfYAwrRJbILzTotxHotEOO3pHh"
+    //    ]
+    
+    let imageURL = [ // github에 올린 이미지 (잘 되긴 하는데,,, 다운받는게 아닌 일반 이미지 url이다.
+        "https://user-images.githubusercontent.com/113565086/221188226-8f43302e-7efc-42d4-b503-17586fc33fd1.png",
+        "https://user-images.githubusercontent.com/113565086/221188316-1ddb92e1-d09d-4dc7-b764-f582fb78d7de.png",
+        "https://user-images.githubusercontent.com/113565086/221188430-42d0dcb1-a5cb-4e6d-8699-8589f33fab0f.png",
+        "https://user-images.githubusercontent.com/113565086/221188366-e1f0a91b-258d-412f-a105-1e0969fe06c8.png",
+        "https://user-images.githubusercontent.com/113565086/221188490-88702dcc-4be2-496a-8f0d-a702b39efa62.png"
     ]
     
     // MARK: - IBOutlet
@@ -53,29 +62,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loadAllImageButtonTapped(_ sender: UIButton) {
-        
-        for (_, stackView) in superStackView.arrangedSubviews.enumerated() {
-            
-            // 이미지 초기화
-            if let subStackView = stackView as? UIStackView, let imageView = subStackView.arrangedSubviews[0] as? UIImageView {
-                imageView.image = UIImage(systemName: "photo.fill")
-            }
-            
-        }
 
-        
-        
-//        imageView.image = UIImage(systemName: "photo.fill")
-        
-        //        // 모든 이미지 다운로드 대기열에 올리기
-        //        DispatchQueue.global().async { [weak self] in
-        //
-        //            guard let self = self else { return }
-        //
-        //            for _ in 1...self.imageURL.count {
-        //                self.imageUpdate(imageView: imageView)
-        //            }
-        //        }
+        for (index, stackView) in superStackView.arrangedSubviews.enumerated() {
+            if let subStackView = stackView as? UIStackView, let imageView = subStackView.arrangedSubviews[0] as? UIImageView {
+                
+                // 이미지 초기화
+                imageView.image = UIImage(systemName: "photo.fill")
+                currentIndex = index
+                
+                // 모든 이미지 다운로드 대기열에 올리기
+                DispatchQueue.global().sync { [weak self] in
+                    guard let self = self else { return }
+                    self.imageUpdate(imageView: imageView)
+                }
+            }
+        }
     }
     
     
@@ -100,9 +101,11 @@ class ViewController: UIViewController {
                 return
             }
             
+            let image = UIImage(data: data)
+            
             // image 업데이트
             DispatchQueue.main.async { // UI업데이트는 main queue에서 진행
-                let image = UIImage(data: data)
+                print("이미지 업데이트 진행")
                 imageView.image = image
             }
             
