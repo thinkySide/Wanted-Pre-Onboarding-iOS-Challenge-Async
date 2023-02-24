@@ -42,3 +42,53 @@
         }
     }
 ~~~
+
+### 2. 이미지 업데이트
+이미지는 Google Drive에 업로드 후, 다운로드 링크를 생성해 배열 형태로 만들었습니다.   
+처음에 이미지 업데이트를 정상적으로 하지 못했었는데, URLSession을 사용하지 않아 발생한 문제였습니다.   
+- Main Queue에서 UI업데이트 관련 코드 작성.
+- URLSession을 이용하지 않고도 처음에 이미지 업데이트가 잘 되었었는데, 이후에 갑자기 작동 안함 (추가로 공부해야 할 내용)   
+
+다음은 URLSession을 추가해 이미지를 업데이트하는 코드입니다.
+~~~swift
+@IBAction func loadButtonTapped(_ sender: UIButton) {
+        
+        // 컴포넌트 잡기
+        guard
+            let stackView = sender.superview as? UIStackView,
+            let imageView = stackView.arrangedSubviews[0] as? UIImageView
+        else { return }
+        
+        // 이미지 업데이트
+        imageUpdate(imageView: imageView)
+    }
+    
+    func imageUpdate(imageView: UIImageView) {
+        
+        // 현재 선택된 index의 이미지 URL
+        guard let url = URL(string: imageURL[currentIndex]) else { return }
+        
+        // URLSession
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            // 에러 확인
+            guard error == nil else {
+                print("에러가 발생했습니다.: \(error!.localizedDescription)")
+                return
+            }
+            
+            // 데이터 확인
+            guard let data = data else {
+                print("데이터를 전달 받지 못했습니다.")
+                return
+            }
+            
+            // image 업데이트
+            DispatchQueue.main.async { // UI업데이트는 main queue에서 진행
+                let image = UIImage(data: data)
+                imageView.image = image
+            }
+            
+        }.resume()  
+    }
+~~~
