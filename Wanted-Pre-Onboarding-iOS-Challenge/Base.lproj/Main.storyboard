@@ -3,6 +3,7 @@
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,11 +38,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="105"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mla-Pi-Mh0">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="105"/>
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="140" height="102"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="6pR-AM-CFF"/>
                                                     <constraint firstAttribute="width" secondItem="Mla-Pi-Mh0" secondAttribute="height" multiplier="4:3" id="rw5-OY-MgG"/>
                                                 </constraints>
+                                                <imageReference key="image" image="photo.fill" catalog="system" variableValue="0.0"/>
                                             </imageView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eOC-cs-VdT">
                                                 <rect key="frame" x="148" y="50.666666666666671" width="101" height="4"/>
@@ -62,8 +65,9 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kxQ-O5-9Lo">
                                         <rect key="frame" x="0.0" y="129" width="364" height="105"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MVE-hA-noa">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="105"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MVE-hA-noa">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="140" height="102"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="953-Wg-M8O"/>
                                                     <constraint firstAttribute="width" secondItem="MVE-hA-noa" secondAttribute="height" multiplier="4:3" id="Jsd-Wk-sbg"/>
@@ -88,8 +92,9 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VFt-29-Nfc">
                                         <rect key="frame" x="0.0" y="258" width="364" height="105"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TlF-NS-LF2">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="105"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TlF-NS-LF2">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="140" height="102"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="lsD-k2-PbA"/>
                                                     <constraint firstAttribute="width" secondItem="TlF-NS-LF2" secondAttribute="height" multiplier="4:3" id="qDx-Y5-ha0"/>
@@ -114,8 +119,9 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WBX-80-a1m">
                                         <rect key="frame" x="0.0" y="387" width="364" height="105"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-4c-h6u">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="105"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-4c-h6u">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="140" height="102"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="dgk-Jf-OMz"/>
                                                     <constraint firstAttribute="width" secondItem="GiF-4c-h6u" secondAttribute="height" multiplier="4:3" id="h0c-id-tT9"/>
@@ -140,8 +146,9 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kAi-gE-7kL">
                                         <rect key="frame" x="0.0" y="516" width="364" height="105"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lEi-0M-q3M">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="105"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lEi-0M-q3M">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="140" height="102"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="EDa-lc-1tL"/>
                                                     <constraint firstAttribute="width" secondItem="lEi-0M-q3M" secondAttribute="height" multiplier="4:3" id="cw9-BV-Mae"/>
@@ -184,6 +191,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
