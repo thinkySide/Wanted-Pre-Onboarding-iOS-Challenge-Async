@@ -1,4 +1,4 @@
-# Wanted-Pre-Onboarding-iOS-Challenge-Async
+# Wanted-iOS-Challenge-Async
 원티드 프리온보딩 iOS 챌린지 코드입니다.
 
 ## I. 완성 코드
